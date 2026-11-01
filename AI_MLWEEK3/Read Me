@@ -1,0 +1,98 @@
+# SMS Spam Filter – Breaking the Model
+
+## Project Overview
+
+This project builds a simple SMS spam classifier using **Machine Learning**. It uses TF-IDF to convert text messages into numerical features and the Multinomial Naive Bayes algorithm to classify messages as either spam or ham (not spam).
+
+The goal is not only to train the model but also to test its weaknesses by creating messages that may fool the classifier.
+
+## Technologies Used
+
+- Python
+- Pandas
+- Scikit-learn
+- TF-IDF Vectorizer
+- Multinomial Naive Bayes
+- Jupyter Notebook
+
+## Dataset
+
+The project uses the **SMS Spam Collection Dataset**, which contains SMS messages labeled as:
+
+- `spam` – Unwanted or promotional messages.
+- `ham` – Normal, legitimate messages.
+
+Dataset source: [UCI SMS Spam Collection](https://archive.ics.uci.edu/dataset/228/sms+spam+collection)
+
+## How the Model Works
+
+1. Load the SMS dataset.
+2. Split the dataset into training and testing sets (80% training and 20% testing).
+3. Use TF-IDF to convert text messages into numerical features.
+4. Train a Multinomial Naive Bayes classifier.
+5. Predict whether test messages are spam or ham.
+6. Calculate the model's accuracy.
+7. Test the model using specially written messages to identify its weaknesses.
+
+## Model Accuracy
+
+The model was evaluated using accuracy score.
+
+| Evaluation | Result |
+|---|---|
+| Training data | 80% |
+| Testing data | 20% |
+| Model accuracy | [0.9668161434977578] |
+
+## What I Learned
+
+1. Machine learning models can achieve high accuracy but still make mistakes.
+2. TF-IDF converts text into numerical features that machine learning algorithms can process.
+3. Naive Bayes can struggle with spelling variations, negation, and context.
+4. Testing a model with unusual examples helps reveal weaknesses that accuracy alone cannot show.
+5. A high accuracy score does not mean a model is perfect.
+
+## Project Files
+
+AI_MLWEEK3/
+│
+├── data/
+│   └── SMSSpamCollection
+│
+├── notebook/
+│   └── spam_filter.ipynb
+│
+├── spam_filter.py
+├── README.md
+└── requirements.txt
+```
+
+## How to Run the Project
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/Redie-tes/AWS_AI_ML_Learning
+   ```
+
+2. Navigate into the project folder:
+
+   ```bash
+   cd AI_MLWEEK3
+   ```
+
+3. Install the required libraries:
+
+   ```bash
+   pip install pandas scikit-learn
+   ```
+
+4. Run the Python script:
+
+   ```bash
+   python spam_filter.py
+   ```
+
+## Conclusion
+
+This experiment demonstrates that even a simple spam classifier can perform well while remaining vulnerable to carefully written messages. It highlights the importance of testing machine learning models beyond accuracy and understanding their limitations.
