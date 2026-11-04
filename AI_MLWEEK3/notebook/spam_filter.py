@@ -4,7 +4,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import train_test_split
 df = pd.read_csv(
-    r"E:\AI_ML\AI_MLWEEK3/data/SMSSpamCollection",
+    r"AI_MLWEEK3/data/SMSSpamCollection",
     sep ="\t",
     header= None,
     names=["labels", "emails"]
